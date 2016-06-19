@@ -1,0 +1,69 @@
+{% extends "base.html" %}
+{% load tools %}
+{% block title %}Status {% endblock %} 
+
+{% block right_header %}
+{% endblock %}
+
+{% block content %}
+
+<div class="ui centered grid">
+<div class="six wide column">
+  <h3 class="ui header">HTTP Knows</h3>
+  <p class="text grey">
+  HTTPKnows是一个轻量的HTTP知识库, 它包含所有标准的HTTP方法, HTTP返回码及所表示的意义, 制定的标准均来自互联网工程任务组(<b>IETF</b>)
+  </p>
+</div>
+<div class="sixteen wide column">
+  <div class="ui fluid centered grid" style="background-color: #eeeeee;">
+    <div class="six wide column">
+      <i class="github icon"></i>
+      <a href="#">Star on Github</a>
+    </div>
+  </div>
+</div>
+<div class="six wide column" style="font-family: Courier New;">
+  <h4 class="ui header">Methods</h4>
+  <div id="methods" class="ui selection list">
+    {% for method, info in methods.items %}
+      <div class="item">
+        <div class="right floated content">
+          <a href="{{ info|value:"section" }}">{{ info|value:"rfc" }}</a>
+        </div>
+        <div class="content">
+          <span class="grey text"><b>{{ method }}</b></span>
+          <div class="description" style="display: none;">
+            <div class="ui segment">
+            <span class="grey text">{{ info|value:"description" }}</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    {% endfor %}
+  </div>
+  <h4 class="ui header">Status Code</h4>
+  {% for cg, sc in category.items %}
+    {% if cg != "Vxx" %}
+      <h5 class="ui header" style="margin-bottom: 5px;">{{ cg }} {{ maps|value:cg }}</h5>
+      <div class="ui selection list">
+      {% for value, description, references in sc %}
+        {% if description != "Unassigned" %}
+        <div class="item">
+          <span class="grey text"><b>{{ value }}</b></span>
+          <span class="green text">{{ description }}</span>
+          <div class="right floated content">
+            {% for reference in references %}
+              <a href="{{ reference|gen_url_from_reference }}">{{ reference|get_reference }}</a>
+            {% endfor %}
+          </div>
+        </div>
+        {% endif %}
+      {% endfor %}
+      </div>
+    {% endif %}
+  {% endfor %}
+</div>
+
+</div>
+
+{% endblock %}

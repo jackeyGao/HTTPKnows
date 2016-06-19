@@ -1,0 +1,73 @@
+{% load staticfiles %}
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>{% block title %} {% endblock %} | RequestMeta</title>
+    <link rel="stylesheet" type="text/css" href="{% static "semantic.min.css" %}">
+    <link rel="stylesheet" type="text/css" href="{% static "style.css" %}">
+    <link rel="stylesheet" type="text/css" href="{% static "prettify.min.css" %}">
+    <script src="{% static "prettify.min.js" %}"></script>
+    <script src="{% static "jquery.js" %}"></script>
+
+    <script type="text/javascript">
+      function createURL() {
+        $.ajax({'url': '/url/create/', 'type': 'GET', 
+          'success': function(data) {
+          window.location.href = "/inspect/"+data+"/";
+       }
+     });
+      }
+
+      
+    </script>
+  </head>
+  <body onload="prettyPrint()">
+    <a name="top"></a>
+    <div class="ui fluid container">
+      <div class="ui grid" style="margin-left: 35px;margin-right: 35px;">
+        <div class="four wide column"  style="margin-top: 80px;">
+          <div class="bottom-right" style="float: right;">
+            <a href="/">
+            <h1 class="ui green header" style="font-size: 3em;">HTTP<span  class="text grey">Knows</span></h1>
+            </a>
+          </div>
+        </div>
+        <div class="twelve wide column">
+        {% block right_header %} {% endblock %}
+        </div>
+      </div>
+    </div>
+    <div class="content-wrap" style="margin-top: 30px;">
+    {% block content %} {% endblock %}
+    </div>
+    <div class="footer-wrap">
+      <div class="ui fluid wrapper container">
+        <div class="ui horizontal bulleted list">
+          <a class="item" href="http://omem.me/about/">
+            About me
+          </a>
+          <a class="item" href="http://omem.me">
+            Blog
+          </a>
+          <a class="item" href="https://github.com/jackeyGao">
+            Github
+          </a>
+          <a class="item" href="https://twitter.com/JackeyGaoo">
+            Twitter
+          </a>
+        </div>
+        <div>
+            <span class="teal text" style="font-size: 12px;">© 2016 JackeyGao. Power by <a href="https://www.djangoproject.com/"><span class="green text">Django</span></a></span>
+        </div>
+      </div>
+    </div>
+    <script>
+      $(function () {
+        $('#methods .item').click(function() {
+          $(this).find('.description').toggle();
+        });
+      });
+    </script>
+  </body> 
+</html>
+
