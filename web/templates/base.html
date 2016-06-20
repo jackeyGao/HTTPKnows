@@ -41,23 +41,79 @@
     {% block content %} {% endblock %}
     </div>
     <div class="footer-wrap">
-      <div class="ui fluid wrapper container">
-        <div class="ui horizontal bulleted list">
-          <a class="item" href="http://omem.me/about/">
-            About me
-          </a>
-          <a class="item" href="http://omem.me">
-            Blog
-          </a>
-          <a class="item" href="https://github.com/jackeyGao">
-            Github
-          </a>
-          <a class="item" href="https://twitter.com/JackeyGaoo">
-            Twitter
-          </a>
+      <div class="ui grid">
+        <div class="three wide column"></div>
+        <div class="ten wide column">
+          <div class="ui grid">
+            <div class="five wide column">
+              <h4 class="ui grey header">项目</h4>
+              <div class="ui inverted link list">
+                <div class="item">
+                  <div class="content">
+                    <a class="item" href="http://meta.omem.me/">
+                      <h5 class="ui grey header">Request<span class="text green">Meta</span></h5>
+                    </a>
+                  </div>
+                </div>
+                <div class="item">
+                  <div class="content">
+                    <a class="item" href="http://knows.omem.me/">
+                      <h5 class="ui green header">Http<span class="text grey">Knows</span></h5>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="four wide column">
+              <h4 class="ui grey header">联系方式</h4>
+              <div class="ui list">
+                  <a class="item" href="mailto:gaojunqi@outlook.com">
+                    Email
+                  </a>
+                  <a class="item" href="https://github.com/jackeyGao">
+                    Github
+                  </a>
+                  <a class="item" href="https://twitter.com/JackeyGaoo">
+                    Twitter
+                  </a>
+                  <a class="item" href="https://coding.net/u/jackeygao">
+                    Coding
+                  </a>
+              </div>
+            </div>
+
+            <div class="four wide column">
+              <h4 class="ui grey header">关于</h4>
+              <div class="ui list">
+                  <a class="item" href="http://omem.me/about/">
+                    关于我
+                  </a>
+                  <a class="item" href="http://omem.me/">
+                    博客
+                  </a>
+                  <a class="item" href="https://www.conoha.jp/referral/?token=G8vOyReluNtZN0fQSSAyNzldtPOCAFhanp39bkuppaJG.w90xHc-01S">
+                    主机托管
+                  </a>
+                  <a class="item" href="https://portal.qiniu.com/signup?code=3lkleyn0zr7ma">
+                    静态托管
+                  </a>
+              </div>
+            </div>
+            <div class="three wide column">
+              <h4 class="ui grey header">微信</h4>
+              <img class="ui image" src="{% static "images/wechat.png" %}">
+            </div>
+          </div>
         </div>
-        <div>
-            <span class="teal text" style="font-size: 12px;">© 2016 JackeyGao. Power by <a href="https://www.djangoproject.com/"><span class="green text">Django</span></a></span>
+        <div class="three wide column"></div>
+        <div class="sixteen wide column">
+        <div class="ui inverted divider"></div>
+          <div class="ui fluid wrapper container">
+            <div>
+                <span class="teal text" style="font-size: 12px;">© 2016 JackeyGao. Power by <a href="https://   www.djangoproject.com/"><span class="green text">Django</span></a></span>
+            </div>
+          </div>
         </div>
       </div>
     </div>
