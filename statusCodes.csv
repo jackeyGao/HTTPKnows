@@ -1,55 +1,55 @@
 Value,Description,Reference
-100,Continue,"[RFC7231, Section 6.2.1]"
-101,Switching Protocols,"[RFC7231, Section 6.2.2]"
-102,Processing,[RFC2518]
+100,继续,"[RFC7231, Section 6.2.1]"
+101,切换协议,"[RFC7231, Section 6.2.2]"
+102,继续执行,[RFC2518]
 103-199,Unassigned,
-200,OK,"[RFC7231, Section 6.3.1]"
-201,Created,"[RFC7231, Section 6.3.2]"
-202,Accepted,"[RFC7231, Section 6.3.3]"
-203,Non-Authoritative Information,"[RFC7231, Section 6.3.4]"
-204,No Content,"[RFC7231, Section 6.3.5]"
-205,Reset Content,"[RFC7231, Section 6.3.6]"
-206,Partial Content,"[RFC7233, Section 4.1]"
-207,Multi-Status,[RFC4918]
+200,成功,"[RFC7231, Section 6.3.1]"
+201,已创建,"[RFC7231, Section 6.3.2]"
+202,已接受,"[RFC7231, Section 6.3.3]"
+203,非授权信息,"[RFC7231, Section 6.3.4]"
+204,无内容,"[RFC7231, Section 6.3.5]"
+205,重置内容,"[RFC7231, Section 6.3.6]"
+206,部分内容,"[RFC7233, Section 4.1]"
+207,多种状态码,[RFC4918]
 208,Already Reported,[RFC5842]
 209-225,Unassigned,
 226,IM Used,[RFC3229]
 227-299,Unassigned,
-300,Multiple Choices,"[RFC7231, Section 6.4.1]"
-301,Moved Permanently,"[RFC7231, Section 6.4.2]"
-302,Found,"[RFC7231, Section 6.4.3]"
-303,See Other,"[RFC7231, Section 6.4.4]"
-304,Not Modified,"[RFC7232, Section 4.1]"
-305,Use Proxy,"[RFC7231, Section 6.4.5]"
+300,多种选择,"[RFC7231, Section 6.4.1]"
+301,永久移动,"[RFC7231, Section 6.4.2]"
+302,临时移动,"[RFC7231, Section 6.4.3]"
+303,查看其他位置,"[RFC7231, Section 6.4.4]"
+304,未修改,"[RFC7232, Section 4.1]"
+305,使用代理,"[RFC7231, Section 6.4.5]"
 306,(Unused),"[RFC7231, Section 6.4.6]"
-307,Temporary Redirect,"[RFC7231, Section 6.4.7]"
+307,临时重定向,"[RFC7231, Section 6.4.7]"
 308,Permanent Redirect,[RFC7538]
 309-399,Unassigned,
-400,Bad Request,"[RFC7231, Section 6.5.1]"
-401,Unauthorized,"[RFC7235, Section 3.1]"
+400,错误请求,"[RFC7231, Section 6.5.1]"
+401,未授权,"[RFC7235, Section 3.1]"
 402,Payment Required,"[RFC7231, Section 6.5.2]"
-403,Forbidden,"[RFC7231, Section 6.5.3]"
-404,Not Found,"[RFC7231, Section 6.5.4]"
-405,Method Not Allowed,"[RFC7231, Section 6.5.5]"
-406,Not Acceptable,"[RFC7231, Section 6.5.6]"
-407,Proxy Authentication Required,"[RFC7235, Section 3.2]"
-408,Request Timeout,"[RFC7231, Section 6.5.7]"
-409,Conflict,"[RFC7231, Section 6.5.8]"
-410,Gone,"[RFC7231, Section 6.5.9]"
-411,Length Required,"[RFC7231, Section 6.5.10]"
-412,Precondition Failed,"[RFC7232, Section 4.2]"
-413,Payload Too Large,"[RFC7231, Section 6.5.11]"
-414,URI Too Long,"[RFC7231, Section 6.5.12]"
-415,Unsupported Media Type,"[RFC7231, Section 6.5.13][RFC7694, Section 3]"
-416,Range Not Satisfiable,"[RFC7233, Section 4.4]"
-417,Expectation Failed,"[RFC7231, Section 6.5.14]"
+403,禁止,"[RFC7231, Section 6.5.3]"
+404,未找到,"[RFC7231, Section 6.5.4]"
+405,方法禁用,"[RFC7231, Section 6.5.5]"
+406,不接受,"[RFC7231, Section 6.5.6]"
+407,需要代理授权,"[RFC7235, Section 3.2]"
+408,请求超时,"[RFC7231, Section 6.5.7]"
+409,冲突,"[RFC7231, Section 6.5.8]"
+410,已删除,"[RFC7231, Section 6.5.9]"
+411,需要有效长度,"[RFC7231, Section 6.5.10]"
+412,未满足前提条件,"[RFC7232, Section 4.2]"
+413,请求实体过大,"[RFC7231, Section 6.5.11]"
+414,请求的 URI 过长,"[RFC7231, Section 6.5.12]"
+415,不支持的媒体类型,"[RFC7231, Section 6.5.13][RFC7694, Section 3]"
+416,请求范围不符合要求,"[RFC7233, Section 4.4]"
+417,未满足期望值,"[RFC7231, Section 6.5.14]"
 418-420,Unassigned,
 421,Misdirected Request,"[RFC7540, Section 9.1.2]"
-422,Unprocessable Entity,[RFC4918]
-423,Locked,[RFC4918]
-424,Failed Dependency,[RFC4918]
+422,语义错误,[RFC4918]
+423,当前资源被锁定,[RFC4918]
+424,依赖的请求发生错误,[RFC4918]
 425,Unassigned,
-426,Upgrade Required,"[RFC7231, Section 6.5.15]"
+426,客户端应当切换到TLS/1.0,"[RFC7231, Section 6.5.15]"
 427,Unassigned,
 428,Precondition Required,[RFC6585]
 429,Too Many Requests,[RFC6585]
@@ -58,12 +58,12 @@ Value,Description,Reference
 432-450,Unassigned,
 451,Unavailable For Legal Reasons,[RFC7725]
 452-499,Unassigned,
-500,Internal Server Error,"[RFC7231, Section 6.6.1]"
-501,Not Implemented,"[RFC7231, Section 6.6.2]"
-502,Bad Gateway,"[RFC7231, Section 6.6.3]"
-503,Service Unavailable,"[RFC7231, Section 6.6.4]"
-504,Gateway Timeout,"[RFC7231, Section 6.6.5]"
-505,HTTP Version Not Supported,"[RFC7231, Section 6.6.6]"
+500,服务器内部错误,"[RFC7231, Section 6.6.1]"
+501,尚未实施,"[RFC7231, Section 6.6.2]"
+502,错误网关,"[RFC7231, Section 6.6.3]"
+503,服务不可用,"[RFC7231, Section 6.6.4]"
+504,网关超时,"[RFC7231, Section 6.6.5]"
+505,HTTP 版本不受支持,"[RFC7231, Section 6.6.6]"
 506,Variant Also Negotiates,[RFC2295]
 507,Insufficient Storage,[RFC4918]
 508,Loop Detected,[RFC5842]
